@@ -15,22 +15,28 @@ const fn2 = () => {
 };
 
 //React functional component
-const HeadingCoponent1 = () => {
+const Title = () => {
   return (
-    <>
-      <h1 className="head">
-        Namaste React Funcationl component with return !!
-      </h1>
-      <h2 className="head">
-        Namaste React Funcationl component with return !!
-      </h2>
-    </>
+    <div>
+      <h1 className="head">Titel !!</h1>
+    </div>
   );
 };
 
-const HeadingCoponent2 = () => (
-  <h1 className="head">Namaste React Funcationl component without return !!</h1>
+const number = 100;
+
+/* component inside component is called component composition */
+const HeadingCoponent = () => (
+  <div className="container">
+    <Title />
+    <Title></Title>
+    {Title()}
+    <h1 className="head">
+      Namaste React Funcationl component without return !!
+    </h1>
+    <h2>JS Expression {2 * number}</h2>
+  </div>
 );
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<HeadingCoponent1 />);
+root.render(<HeadingCoponent />);
