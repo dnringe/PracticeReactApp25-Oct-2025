@@ -2,22 +2,35 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 //React Element
-const heading = React.createElement(
-  "h1",
-  { id: "heading", abc: "xyz" },
-  "Namaste React !"
+const heading = (
+  <h1 className="head" tabIndex="5">
+    Namaste React using JSX !
+  </h1>
 );
-
 console.log("heading:::", heading);
 
-// JSX - HTML like or XML like systax
-// JSX => Babel transpiles it to React.creatElement => ReactElement-JS Object => HTMLElement(render)
-const jsxHeading = <h1>Namaste React using JSX !</h1>;
+const fn1 = () => true;
+const fn2 = () => {
+  return true;
+};
 
-console.log("jsxHeading:::", jsxHeading);
+//React functional component
+const HeadingCoponent1 = () => {
+  return (
+    <>
+      <h1 className="head">
+        Namaste React Funcationl component with return !!
+      </h1>
+      <h2 className="head">
+        Namaste React Funcationl component with return !!
+      </h2>
+    </>
+  );
+};
+
+const HeadingCoponent2 = () => (
+  <h1 className="head">Namaste React Funcationl component without return !!</h1>
+);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(jsxHeading);
-
-//  git config --global user.email "dnringe@gmail.com"
-// git config --global user.name "dninge"
+root.render(<HeadingCoponent1 />);
