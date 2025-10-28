@@ -26,17 +26,18 @@ const Header = () => {
     </div>
   );
 };
-const RestaurantCard = () => {
+const RestaurantCard = (props) => {
+  console.log(props);
   return (
     <div className="res-card" style={styleCard}>
       <img
         className="res-logo"
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNchE8UnHYCE3bYNikL2Rd1qgQFFGpOO9uVA&s"
       />
-      <h3>Meghana Foods</h3>
-      <h4>Biryani, North Indian, Asian</h4>
-      <h4>4.4</h4>
-      <h4>38 min</h4>
+      <h3>{props.resName}</h3>
+      <h4>{props.cuisine}</h4>
+      <h4>{props.rating}</h4>
+      <h4>{props.time}</h4>
     </div>
   );
 };
@@ -45,22 +46,18 @@ const Body = () => {
     <div className="body">
       <div className="search">Search</div>
       <div className="res-container">
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
+        <RestaurantCard
+          resName="Meghana Foods"
+          cuisine="Biryani, North Indian, Asian"
+          rating="4.4"
+          time="38 min"
+        />
+        <RestaurantCard
+          resName="KFC"
+          cuisine="Chicken"
+          rating="4.1"
+          time="31 min"
+        />
       </div>
     </div>
   );
