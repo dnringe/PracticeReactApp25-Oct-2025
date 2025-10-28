@@ -27,6 +27,8 @@ const Header = () => {
   );
 };
 const RestaurantCard = (props) => {
+  //passing props & destructuting
+  const { resName, cuisine, rating, time } = props;
   console.log(props);
   return (
     <div className="res-card" style={styleCard}>
@@ -34,10 +36,10 @@ const RestaurantCard = (props) => {
         className="res-logo"
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNchE8UnHYCE3bYNikL2Rd1qgQFFGpOO9uVA&s"
       />
-      <h3>{props.resName}</h3>
-      <h4>{props.cuisine}</h4>
-      <h4>{props.rating}</h4>
-      <h4>{props.time}</h4>
+      <h3>{resName}</h3>
+      <h4>{cuisine}</h4>
+      <h4>{rating}</h4>
+      <h4>{time}</h4>
     </div>
   );
 };
