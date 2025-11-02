@@ -8,7 +8,7 @@ const RestaurantCard = (props) => {
     backgroundColor: "#f0f0f0",
   };
   const { cloudinaryImageId, name, cuisines, avgRating, costForTwo } =
-    resData?.info;
+    resData?.card?.card?.info;
 
   return (
     <div className="res-card" style={styleCard}>
