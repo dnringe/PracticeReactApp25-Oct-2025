@@ -26,20 +26,115 @@ const Header = () => {
     </div>
   );
 };
+
+const resData = {
+  info: {
+    id: "736076",
+    name: "S Kumar Wadewale",
+    cloudinaryImageId: "e427d33a122a3a544fb83ee915a78114",
+    locality: "Aundh",
+    areaName: "Baner",
+    costForTwo: "₹200 for two",
+    cuisines: ["South Indian", "Snacks", "Fast Food", "Thalis"],
+    avgRating: 4.3,
+    veg: true,
+    parentId: "173474",
+    avgRatingString: "4.3",
+    totalRatingsString: "1.1K+",
+    promoted: true,
+    adTrackingId:
+      "cid=34547092~p=0~adgrpid=34547092#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=736076~plpr=COLLECTION~eid=6369a5fc-9560-4f14-8fef-edbe0807f8f0~srvts=1762063421067~collid=80440",
+    sla: {
+      deliveryTime: 36,
+      lastMileTravel: 6.7,
+      serviceability: "SERVICEABLE",
+      slaString: "35-40 mins",
+      lastMileTravelString: "6.7 km",
+      iconType: "ICON_TYPE_EMPTY",
+    },
+    availability: {
+      nextCloseTime: "2025-11-02 23:00:00",
+      opened: true,
+    },
+    badges: {
+      imageBadges: [
+        {
+          imageId: "Rxawards/_CATEGORY-Vada%20Pav.png",
+          description: "Delivery!",
+        },
+      ],
+    },
+    isOpen: true,
+    type: "F",
+    badgesV2: {
+      entityBadges: {
+        imageBased: {
+          badgeObject: [
+            {
+              attributes: {
+                description: "Delivery!",
+                imageId: "Rxawards/_CATEGORY-Vada%20Pav.png",
+              },
+            },
+          ],
+        },
+        textExtendedBadges: {},
+        textBased: {},
+      },
+    },
+    aggregatedDiscountInfoV3: {
+      header: "₹50 OFF",
+      subHeader: "ABOVE ₹99",
+      discountTag: "FLAT DEAL",
+      logoCtx: {
+        text: "BENEFITS",
+      },
+    },
+    orderabilityCommunication: {
+      title: {},
+      subTitle: {},
+      message: {},
+      customIcon: {},
+      commsStyling: {},
+    },
+    differentiatedUi: {
+      displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+      differentiatedUiMediaDetails: {
+        mediaType: "ADS_MEDIA_ENUM_IMAGE",
+        lottie: {},
+        video: {},
+      },
+    },
+    reviewsSummary: {},
+    displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+    restaurantOfferPresentationInfo: {},
+    externalRatings: {
+      aggregatedRating: {
+        rating: "--",
+      },
+    },
+    ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    campaignId: "34547092",
+  },
+};
 const RestaurantCard = (props) => {
   //passing props & destructuting
-  const { resName, cuisine, rating, time } = props;
+  const { resData } = props;
   console.log(props);
   return (
     <div className="res-card" style={styleCard}>
       <img
         className="res-logo"
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNchE8UnHYCE3bYNikL2Rd1qgQFFGpOO9uVA&s"
+        src={
+          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
+          resData.info.cloudinaryImageId
+        }
       />
-      <h3>{resName}</h3>
-      <h4>{cuisine}</h4>
-      <h4>{rating}</h4>
-      <h4>{time}</h4>
+      <h3>{resData.info.name}</h3>
+      <h4>{resData.info.cuisines.join(", ")}</h4>
+      <h4>{resData.info.avgRating}</h4>
+      <h4>{resData.info.costForTwo}</h4>
+      <h4>{resData.info.sla.deliveryTime} minutes</h4>
     </div>
   );
 };
@@ -48,18 +143,13 @@ const Body = () => {
     <div className="body">
       <div className="search">Search</div>
       <div className="res-container">
-        <RestaurantCard
-          resName="Meghana Foods"
-          cuisine="Biryani, North Indian, Asian"
-          rating="4.4"
-          time="38 min"
-        />
-        <RestaurantCard
+        <RestaurantCard resData={resData} />
+        {/* <RestaurantCard
           resName="KFC"
           cuisine="Chicken"
           rating="4.1"
           time="31 min"
-        />
+        /> */}
       </div>
     </div>
   );
@@ -73,5 +163,6 @@ const AppLayout = () => {
     </div>
   );
 };
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<AppLayout />);
