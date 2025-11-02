@@ -27,96 +27,297 @@ const Header = () => {
   );
 };
 
-const resData = {
-  info: {
-    id: "736076",
-    name: "S Kumar Wadewale",
-    cloudinaryImageId: "e427d33a122a3a544fb83ee915a78114",
-    locality: "Aundh",
-    areaName: "Baner",
-    costForTwo: "₹200 for two",
-    cuisines: ["South Indian", "Snacks", "Fast Food", "Thalis"],
-    avgRating: 4.3,
-    veg: true,
-    parentId: "173474",
-    avgRatingString: "4.3",
-    totalRatingsString: "1.1K+",
-    promoted: true,
-    adTrackingId:
-      "cid=34547092~p=0~adgrpid=34547092#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=736076~plpr=COLLECTION~eid=6369a5fc-9560-4f14-8fef-edbe0807f8f0~srvts=1762063421067~collid=80440",
-    sla: {
-      deliveryTime: 36,
-      lastMileTravel: 6.7,
-      serviceability: "SERVICEABLE",
-      slaString: "35-40 mins",
-      lastMileTravelString: "6.7 km",
-      iconType: "ICON_TYPE_EMPTY",
-    },
-    availability: {
-      nextCloseTime: "2025-11-02 23:00:00",
-      opened: true,
-    },
-    badges: {
-      imageBadges: [
-        {
-          imageId: "Rxawards/_CATEGORY-Vada%20Pav.png",
-          description: "Delivery!",
-        },
-      ],
-    },
-    isOpen: true,
-    type: "F",
-    badgesV2: {
-      entityBadges: {
-        imageBased: {
-          badgeObject: [
-            {
-              attributes: {
-                description: "Delivery!",
+const resList = [
+  {
+    card: {
+      card: {
+        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+        info: {
+          id: "736076",
+          name: "S Kumar Wadewale",
+          cloudinaryImageId: "e427d33a122a3a544fb83ee915a78114",
+          locality: "Aundh",
+          areaName: "Baner",
+          costForTwo: "₹200 for two",
+          cuisines: ["South Indian", "Snacks", "Fast Food", "Thalis"],
+          avgRating: 4.3,
+          veg: true,
+          parentId: "173474",
+          avgRatingString: "4.3",
+          totalRatingsString: "1.1K+",
+          promoted: true,
+          adTrackingId:
+            "cid=34547092~p=0~adgrpid=34547092#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=736076~plpr=COLLECTION~eid=3265d5ac-5b4c-4df8-9705-838a5fdf51ad~srvts=1762064866050~collid=80440",
+          sla: {
+            deliveryTime: 38,
+            lastMileTravel: 6.7,
+            serviceability: "SERVICEABLE",
+            slaString: "35-40 mins",
+            lastMileTravelString: "6.7 km",
+            iconType: "ICON_TYPE_EMPTY",
+          },
+          availability: {
+            nextCloseTime: "2025-11-02 23:00:00",
+            opened: true,
+          },
+          badges: {
+            imageBadges: [
+              {
                 imageId: "Rxawards/_CATEGORY-Vada%20Pav.png",
+                description: "Delivery!",
               },
+            ],
+          },
+          isOpen: true,
+          type: "F",
+          badgesV2: {
+            entityBadges: {
+              textBased: {},
+              imageBased: {
+                badgeObject: [
+                  {
+                    attributes: {
+                      imageId: "Rxawards/_CATEGORY-Vada%20Pav.png",
+                      description: "Delivery!",
+                    },
+                  },
+                ],
+              },
+              textExtendedBadges: {},
             },
-          ],
+          },
+          aggregatedDiscountInfoV3: {
+            header: "₹50 OFF",
+            subHeader: "ABOVE ₹99",
+            discountTag: "FLAT DEAL",
+            logoCtx: {
+              text: "BENEFITS",
+            },
+          },
+          orderabilityCommunication: {
+            title: {},
+            subTitle: {},
+            message: {},
+            customIcon: {},
+            commsStyling: {},
+          },
+          differentiatedUi: {
+            displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            differentiatedUiMediaDetails: {
+              mediaType: "ADS_MEDIA_ENUM_IMAGE",
+              lottie: {},
+              video: {},
+            },
+          },
+          reviewsSummary: {},
+          displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+          restaurantOfferPresentationInfo: {},
+          externalRatings: {
+            aggregatedRating: {
+              rating: "--",
+            },
+          },
+          ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+          campaignId: "34547092",
         },
-        textExtendedBadges: {},
-        textBased: {},
+        analytics: {},
+        cta: {
+          link: "swiggy://menu?restaurant_id=736076&source=collection&query=Idli",
+          text: "RESTAURANT_MENU",
+          type: "DEEPLINK",
+        },
+        widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food",
+      },
+      relevance: {
+        type: "RELEVANCE_TYPE_ON_MENU_RETURN",
+        sectionId: "MENU_RETURN_FOOD",
       },
     },
-    aggregatedDiscountInfoV3: {
-      header: "₹50 OFF",
-      subHeader: "ABOVE ₹99",
-      discountTag: "FLAT DEAL",
-      logoCtx: {
-        text: "BENEFITS",
-      },
-    },
-    orderabilityCommunication: {
-      title: {},
-      subTitle: {},
-      message: {},
-      customIcon: {},
-      commsStyling: {},
-    },
-    differentiatedUi: {
-      displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-      differentiatedUiMediaDetails: {
-        mediaType: "ADS_MEDIA_ENUM_IMAGE",
-        lottie: {},
-        video: {},
-      },
-    },
-    reviewsSummary: {},
-    displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-    restaurantOfferPresentationInfo: {},
-    externalRatings: {
-      aggregatedRating: {
-        rating: "--",
-      },
-    },
-    ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-    campaignId: "34547092",
   },
-};
+  {
+    card: {
+      card: {
+        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+        info: {
+          id: "521727",
+          name: "Naadbramha Idli",
+          cloudinaryImageId:
+            "FOOD_CATALOG/IMAGES/CMS/2024/4/4/b0ae7267-3f0f-4cf6-af23-a0b849c53dc1_2cc4526f-64b7-4295-81ac-c3f3bbc48b0a.jpg_compressed",
+          locality: "Ambedkar Colony",
+          areaName: "Wakad",
+          costForTwo: "₹200 for two",
+          cuisines: ["South Indian"],
+          avgRating: 4.3,
+          parentId: "251339",
+          avgRatingString: "4.3",
+          totalRatingsString: "699",
+          sla: {
+            deliveryTime: 12,
+            lastMileTravel: 0.3,
+            serviceability: "SERVICEABLE",
+            slaString: "10-15 mins",
+            lastMileTravelString: "0.3 km",
+            iconType: "ICON_TYPE_EMPTY",
+          },
+          availability: {
+            nextCloseTime: "2025-11-02 20:00:00",
+            opened: true,
+          },
+          badges: {
+            imageBadges: [
+              {
+                imageId: "android/static-assets/icons/rx_5_10_min.png",
+                description: "bolt!",
+              },
+            ],
+          },
+          isOpen: true,
+          aggregatedDiscountInfoV2: {},
+          type: "F",
+          badgesV2: {
+            entityBadges: {
+              imageBased: {
+                badgeObject: [
+                  {
+                    attributes: {
+                      imageId: "android/static-assets/icons/rx_5_10_min.png",
+                      description: "bolt!",
+                    },
+                  },
+                ],
+              },
+              textExtendedBadges: {},
+              textBased: {},
+            },
+          },
+          orderabilityCommunication: {
+            title: {},
+            subTitle: {},
+            message: {},
+            customIcon: {},
+            commsStyling: {},
+          },
+          differentiatedUi: {
+            displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            differentiatedUiMediaDetails: {
+              mediaType: "ADS_MEDIA_ENUM_IMAGE",
+              lottie: {},
+              video: {},
+            },
+          },
+          reviewsSummary: {},
+          displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+          restaurantOfferPresentationInfo: {},
+          externalRatings: {
+            aggregatedRating: {
+              rating: "--",
+            },
+          },
+          ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+        },
+        analytics: {},
+        cta: {
+          link: "swiggy://menu?restaurant_id=521727&source=collection&query=Idli",
+          text: "RESTAURANT_MENU",
+          type: "DEEPLINK",
+        },
+        widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food",
+      },
+      relevance: {
+        type: "RELEVANCE_TYPE_ON_MENU_RETURN",
+        sectionId: "MENU_RETURN_FOOD",
+      },
+    },
+  },
+  {
+    card: {
+      card: {
+        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+        info: {
+          id: "460575",
+          name: "Shiva Snacks Center",
+          cloudinaryImageId: "2041053363601473ac7a6a4bcd666e75",
+          locality: "Nr Juna Jakat Naka",
+          areaName: "Chinchwad",
+          costForTwo: "₹200 for two",
+          cuisines: ["South Indian"],
+          avgRating: 4.6,
+          parentId: "453807",
+          avgRatingString: "4.6",
+          totalRatingsString: "2.1K+",
+          promoted: true,
+          adTrackingId:
+            "cid=34566689~p=1~adgrpid=34566689#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=460575~plpr=COLLECTION~eid=8409231a-a336-4328-a967-76b63dc566c2~srvts=1762064866050~collid=80440",
+          sla: {
+            deliveryTime: 33,
+            lastMileTravel: 4,
+            serviceability: "SERVICEABLE",
+            slaString: "30-35 mins",
+            lastMileTravelString: "4.0 km",
+            iconType: "ICON_TYPE_EMPTY",
+          },
+          availability: {
+            nextCloseTime: "2025-11-02 22:00:00",
+            opened: true,
+          },
+          badges: {},
+          isOpen: true,
+          type: "F",
+          badgesV2: {
+            entityBadges: {
+              textBased: {},
+              imageBased: {},
+              textExtendedBadges: {},
+            },
+          },
+          aggregatedDiscountInfoV3: {
+            header: "10% OFF",
+            subHeader: "UPTO ₹40",
+            logoCtx: {
+              text: "BENEFITS",
+            },
+          },
+          orderabilityCommunication: {
+            title: {},
+            subTitle: {},
+            message: {},
+            customIcon: {},
+            commsStyling: {},
+          },
+          differentiatedUi: {
+            displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            differentiatedUiMediaDetails: {
+              mediaType: "ADS_MEDIA_ENUM_IMAGE",
+              lottie: {},
+              video: {},
+            },
+          },
+          reviewsSummary: {},
+          displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+          restaurantOfferPresentationInfo: {},
+          externalRatings: {
+            aggregatedRating: {
+              rating: "--",
+            },
+          },
+          ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+          campaignId: "34566689",
+        },
+        analytics: {},
+        cta: {
+          link: "swiggy://menu?restaurant_id=460575&source=collection&query=Idli",
+          text: "RESTAURANT_MENU",
+          type: "DEEPLINK",
+        },
+        widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food",
+      },
+      relevance: {
+        type: "RELEVANCE_TYPE_ON_MENU_RETURN",
+        sectionId: "MENU_RETURN_FOOD",
+      },
+    },
+  },
+];
 const RestaurantCard = (props) => {
   //passing props & destructuting
   const { resData } = props;
@@ -127,14 +328,14 @@ const RestaurantCard = (props) => {
         className="res-logo"
         src={
           "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
-          resData.info.cloudinaryImageId
+          resData.card.card.info.cloudinaryImageId
         }
       />
-      <h3>{resData.info.name}</h3>
-      <h4>{resData.info.cuisines.join(", ")}</h4>
-      <h4>{resData.info.avgRating}</h4>
-      <h4>{resData.info.costForTwo}</h4>
-      <h4>{resData.info.sla.deliveryTime} minutes</h4>
+      <h3>{resData.card.card.info.name}</h3>
+      <h4>{resData.card.card.info.cuisines.join(", ")}</h4>
+      <h4>{resData.card.card.info.avgRating}</h4>
+      <h4>{resData.card.card.info.costForTwo}</h4>
+      <h4>{resData.card.card.info.sla.deliveryTime} minutes</h4>
     </div>
   );
 };
@@ -143,7 +344,10 @@ const Body = () => {
     <div className="body">
       <div className="search">Search</div>
       <div className="res-container">
-        <RestaurantCard resData={resData} />
+        <RestaurantCard resData={resList[0]} />
+        <RestaurantCard resData={resList[1]} />
+        <RestaurantCard resData={resList[2]} />
+
         {/* <RestaurantCard
           resName="KFC"
           cuisine="Chicken"
