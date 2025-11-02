@@ -19,7 +19,7 @@
   list-style: none;
   font-size: 20px;
 }
-.search {
+.filter {
   padding: 10px;
   margin: 5px 0;
   background-color: #999999;
@@ -43,4 +43,8 @@
 }
 .res-logo {
   width: 190px;
+}
+
+.filter-btn {
+  cursor: pointer;
 }

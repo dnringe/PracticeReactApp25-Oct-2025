@@ -3,12 +3,12 @@ import { CDN_URL } from "../utils/constants";
 const RestaurantCard = (props) => {
   //passing props & destructuting
   const { resData } = props;
-  console.log(props);
+  // console.log(props);
   const styleCard = {
     backgroundColor: "#f0f0f0",
   };
   const { cloudinaryImageId, name, cuisines, avgRating, costForTwo } =
-    resData?.card?.card?.info;
+    resData?.info;
 
   return (
     <div className="res-card" style={styleCard}>
